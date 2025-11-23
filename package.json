@@ -1,0 +1,72 @@
+{
+  "name": "gemini-webapi",
+  "version": "1.0.0",
+  "description": "✨ An elegant async Node.js/TypeScript wrapper for Google Gemini web app",
+  "keywords": [
+    "API",
+    "async",
+    "Gemini",
+    "Bard",
+    "Google",
+    "Generative AI",
+    "LLM",
+    "TypeScript"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "form-data": "^4.0.1",
+    "html-entities": "^2.5.2",
+    "https-proxy-agent": "^7.0.5",
+    "http2-wrapper": "^2.2.1",
+    "pino": "^9.7.0",
+    "zod": "^3.24.1",
+    "tough-cookie": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/tough-cookie": "^4.0.5",
+    "@typescript-eslint/eslint-plugin": "^8.18.2",
+    "@typescript-eslint/parser": "^8.18.2",
+    "eslint": "^9.17.0",
+    "pino-pretty": "^13.0.0",
+    "prettier": "^3.4.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HanaokaYuzu/Gemini-API.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HanaokaYuzu/Gemini-API/issues"
+  },
+  "author": "UZQueen",
+  "license": "Apache-2.0"
+}
